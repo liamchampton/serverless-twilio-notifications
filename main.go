@@ -12,10 +12,10 @@ import (
 func Main(params map[string]interface{}) map[string]interface{} {
 
 	action := params["action"].(string)
-	twillioNumber := params["twillioNumber"].(string)
+	twilioNumber := params["twilioNumber"].(string)
 	recipientNumber := params["recipientNumber"].(string)
 
-	// only invoke Twillio message service if the GitHub PR action = assigned
+	// only invoke Twilio message service if the GitHub PR action = assigned
 	if action == "assigned" {
 
 		fmt.Println("pull request assigned")
@@ -31,7 +31,7 @@ func Main(params map[string]interface{}) map[string]interface{} {
 		// package the data values
 		msgData := url.Values{}
 		msgData.Set("To", recipientNumber)
-		msgData.Set("From", twillioNumber)
+		msgData.Set("From", twilioNumber)
 		msgData.Set("Body", textMsg)
 		msgDataReader := *strings.NewReader(msgData.Encode())
 
