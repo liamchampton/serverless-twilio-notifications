@@ -25,7 +25,7 @@ func Main(params map[string]interface{}) map[string]interface{} {
 		authToken := params["authToken"].(string)
 		urlStr := "https://api.twilio.com/2010-04-01/Accounts/" + accountSid + "/Messages.json"
 
-		//include param action in this message
+		// text message being sent to recipient
 		textMsg := "New pull request assignee"
 
 		// package the data values
