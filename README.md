@@ -1,6 +1,8 @@
 # serverless-twillio-notifications
 IBM Cloud Functions serverless code to send a text message using the Twillio API. Based upon a pull request action, code will be executed.
 
+For worksop material and instructions please follow https://github.com/IBMDeveloperUK/Cloud-Functions-Twilio-Notifications
+
 ## Params
 `action` = GitHub Webhook [pull requests actions](https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#pull_request)
 
